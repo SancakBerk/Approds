@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Approds | Mobil ve Web Uygulama Geliştirme</title>
+<meta name="description" content="Approds; mobil uygulama, web yazılımı ve dijital ürün geliştirme alanında işletmelere uçtan uca çözümler sunar.">
+<meta property="og:title" content="Approds | Mobil ve Web Uygulama Geliştirme">
+<meta property="og:description" content="Fikrinizi hızlı, ölçeklenebilir ve kullanıcı dostu dijital ürünlere dönüştürüyoruz.">
+<meta property="og:url" content="https://approds.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://approds.com/">
+<style>
+:root{--bg:#0b0d17;--bg2:#12152a;--card:#171b33;--line:#262b4d;--text:#e8eaf6;--muted:#9aa0c3;--brand:#6366f1;--brand2:#22d3ee;--radius:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:rgba(11,13,23,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.logo img{width:32px;height:32px}
+.menu{display:flex;gap:28px;font-size:.95rem;color:var(--muted)}
+.menu a:hover{color:var(--text)}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.95rem;transition:transform .15s,opacity .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:linear-gradient(135deg,var(--brand),#8b5cf6);color:#fff}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.hero{padding:110px 0 90px;text-align:center;background:radial-gradient(60% 50% at 50% 0%,rgba(99,102,241,.28),transparent 70%)}
+.badge{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted);margin-bottom:22px}
+h1{font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.1;letter-spacing:-.03em;max-width:820px;margin:0 auto 20px}
+.grad{background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 34px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:70px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.stat b{display:block;font-size:1.8rem;letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:.9rem}
+section{padding:90px 0}
+.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.head{text-align:center;max-width:640px;margin:0 auto 50px}
+.head small{color:var(--brand2);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+h2{font-size:clamp(1.8rem,3.5vw,2.5rem);letter-spacing:-.02em;margin:8px 0 12px;line-height:1.2}
+.head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--brand);transform:translateY(-3px)}
+.icon{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(99,102,241,.15);margin-bottom:18px}
+.icon svg{width:24px;height:24px;stroke:#a5b4fc;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.about p{color:var(--muted);margin-bottom:16px}
+.list{list-style:none;display:grid;gap:12px;margin-top:22px}
+.list li{display:flex;gap:10px;align-items:flex-start}
+.list li::before{content:"✓";color:var(--brand2);font-weight:800}
+.panel{background:linear-gradient(160deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:24px;padding:34px}
+.step{display:flex;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.step:last-child{border:0}
+.step i{font-style:normal;flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--brand);font-weight:700;font-size:.9rem}
+.step b{display:block}
+.step span{color:var(--muted);font-size:.9rem}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.info{display:grid;gap:16px;align-content:start}
+.info .card{padding:20px}
+.info .card small{color:var(--muted);display:block}
+form{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
+input:focus,textarea:focus{outline:none;border-color:var(--brand)}
+textarea{min-height:140px;resize:vertical}
+form .btn{border:0;cursor:pointer;justify-self:start}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:860px){.menu{display:none}.grid,.about,.contact{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}section{padding:70px 0}.hero{padding:80px 0 60px}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a href="#" class="logo"><img src="/favicon.svg" alt="">Approds</a>
+    <div class="menu">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#surec">Süreç</a>
+      <a href="#iletisim">İletişim</a>
+    </div>
+    <a href="#iletisim" class="btn btn-primary">Teklif Al</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="badge">🚀 Dijital ürün stüdyosu</span>
+      <h1>Fikrinizi <span class="grad">uygulamaya</span> dönüştürüyoruz</h1>
+      <p class="lead">Approds; mobil uygulama, web yazılımı ve dijital ürün geliştirme alanında işletmelere hızlı, ölçeklenebilir ve kullanıcı dostu çözümler sunar.</p>
+      <div class="cta">
+        <a href="#iletisim" class="btn btn-primary">Projenizi Konuşalım</a>
+        <a href="#hizmetler" class="btn btn-ghost">Hizmetlerimiz</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>50+</b><span>Tamamlanan proje</span></div>
+        <div class="stat"><b>1M+</b><span>Uygulama kullanıcısı</span></div>
+        <div class="stat"><b>%98</b><span>Müşteri memnuniyeti</span></div>
+        <div class="stat"><b>7/24</b><span>Teknik destek</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hizmetler" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <small>Hizmetler</small>
+        <h2>Uçtan uca dijital çözümler</h2>
+        <p>Strateji ve tasarımdan geliştirme ve yayına kadar ürününüzün her aşamasında yanınızdayız.</p>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div><h3>Mobil Uygulama</h3><p>iOS ve Android için native ve cross-platform (Flutter, React Native) uygulamalar.</p></div>
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div><h3>Web Geliştirme</h3><p>Hızlı, güvenli ve SEO uyumlu web siteleri, paneller ve SaaS platformları.</p></div>
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 1 0 18M3 12h18"/></svg></div><h3>UI / UX Tasarım</h3><p>Kullanıcı araştırması, prototipleme ve markanıza özel arayüz tasarımı.</p></div>
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 17a4 4 0 0 1 1-7.9A6 6 0 0 1 16.7 7 4.5 4.5 0 0 1 18 16H6"/></svg></div><h3>Bulut ve Backend</h3><p>Ölçeklenebilir API'ler, bulut altyapısı ve DevOps süreçleri.</p></div>
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z"/></svg></div><h3>Yapay Zekâ Entegrasyonu</h3><p>Ürünlerinize akıllı asistanlar, otomasyon ve veri analitiği ekliyoruz.</p></div>
+        <div class="card"><div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div><h3>Bakım ve Büyüme</h3><p>Yayın sonrası destek, performans takibi ve sürekli iyileştirme.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hakkimizda">
+    <div class="wrap about">
+      <div>
+        <div class="head" style="text-align:left;margin:0 0 10px">
+          <small>Hakkımızda</small>
+          <h2>Teknolojiyi işinizin büyüme motoruna dönüştürüyoruz</h2>
+        </div>
+        <p>Approds, girişimlerden kurumsal firmalara kadar farklı ölçekteki işletmelerin dijital ürünlerini hayata geçiren bir yazılım ekibidir.</p>
+        <p>Modern teknolojiler, şeffaf iletişim ve çevik çalışma yöntemleriyle projelerinizi zamanında ve beklentilerin ötesinde teslim ederiz.</p>
+        <ul class="list">
+          <li>Deneyimli tasarım ve yazılım ekibi</li>
+          <li>Çevik (Agile) proje yönetimi ve haftalık raporlama</li>
+          <li>Kaynak kodu ve fikri mülkiyet tamamen sizde</li>
+        </ul>
+      </div>
+      <div class="panel" id="surec">
+        <h3 style="margin-bottom:8px">Nasıl çalışıyoruz?</h3>
+        <div class="step"><i>1</i><div><b>Keşif</b><span>İhtiyaçlarınızı ve hedeflerinizi birlikte netleştiriyoruz.</span></div></div>
+        <div class="step"><i>2</i><div><b>Tasarım</b><span>Prototip ve arayüz tasarımlarıyla ürünü somutlaştırıyoruz.</span></div></div>
+        <div class="step"><i>3</i><div><b>Geliştirme</b><span>Kısa sprintlerle düzenli ve test edilmiş teslimatlar yapıyoruz.</span></div></div>
+        <div class="step"><i>4</i><div><b>Yayın ve Destek</b><span>Ürününüzü yayına alıyor, büyümesini birlikte takip ediyoruz.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="iletisim" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <small>İletişim</small>
+        <h2>Projenizi konuşalım</h2>
+        <p>Formu doldurun, en kısa sürede size dönüş yapalım.</p>
+      </div>
+      <div class="contact">
+        <div class="info">
+          <a class="card" href="mailto:info@approds.com"><small>E-posta</small><b>info@approds.com</b></a>
+          <a class="card" href="tel:+900000000000"><small>Telefon</small><b>+90 (000) 000 00 00</b></a>
+          <div class="card"><small>Adres</small><b>İstanbul, Türkiye</b></div>
+        </div>
+        <form id="form">
+          <div class="row">
+            <input name="name" placeholder="Adınız Soyadınız" required>
+            <input name="email" type="email" placeholder="E-posta adresiniz" required>
+          </div>
+          <input name="subject" placeholder="Konu">
+          <textarea name="message" placeholder="Projenizden kısaca bahsedin" required></textarea>
+          <button class="btn btn-primary" type="submit">Mesaj Gönder</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> Approds. Tüm hakları saklıdır.</span>
+    <span>approds.com</span>
+  </div>
+</footer>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=new FormData(this);
+  var body='Ad: '+f.get('name')+'\nE-posta: '+f.get('email')+'\n\n'+f.get('message');
+  location.href='mailto:info@approds.com?subject='+encodeURIComponent(f.get('subject')||'Web sitesi iletişim formu')+'&body='+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
